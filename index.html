@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/global.css">
+</head>
+<body>
+    <main>
+        <h1>Navigation Planner</h1>
+        <div class="checklist">
+            <h2>Checklist</h2>
+            <label for="route">
+                Route:
+                <input type="checkbox" name="route" id="route">
+            </label>
+            <label for="notams">
+                NOTAMS:
+                <input type="checkbox" name="notams" id="notams">
+            </label>
+            <label for="wx">
+                Weather:
+                <input type="checkbox" name="wx" id="wx">
+            </label>
+            <label for="fuel">
+                Fuel:
+                <input type="checkbox" name="fuel" id="fuel">
+            </label>
+            <label for="mass">
+                Mass & Balance
+                <input type="checkbox" name="mass" id="mass">
+            </label>
+            <label for="plog">
+                PLOG:
+                <input type="checkbox" name="plog" id="plog">
+            </label>
+        </div>
+        
+        <div class="route">
+            <h2>Route Display</h2>
+            <p>Upload a screenshot/picture of your planned route</p>
+            <form id="route-pic-upload">
+                <label for="route-pic-upload">Choose an image to upload:</label>
+                <input type="file" id="image-imput" accept="image/*">
+            </form>
+            <div class="route-image-preview">
+                <p>No image uploaded yet</p>
+            </div>
+        </div>
+
+        <div class="effective-notams">
+            <h2>NOTAMS</h2>
+            <form id="effective-notmas">
+                <label for="notams-notes">Add notes about NOTAMS to effect:</label>
+                <textarea name="notams-notes"></textarea>
+            </form>
+        </div>
+
+        <div class="weather">
+            <h2>Weather</h2>
+            <form>
+                <label for="departure">Departure Airport:</label>
+                <textarea name="departure" id="departure"></textarea>
+            </form>
+            <form>
+                <label for="enroute">Enroute:</label>
+                <textarea name="enroute" id="departure"></textarea>
+            </form>
+            <form>
+                <label for="destination">Destination Airport:</label>
+                <textarea name="destination" id="departure"></textarea>
+            </form>
+        </div>
+
+        <div class="fuel">
+            <h2>Fuel Planning</h2>
+            <p>Enter your fuel planning</p>
+            <form>
+                <label for="taxi">Taxi:</label>
+                <input type="text">
+                <label for="trip">Trip:</label>
+                <input type="trip">
+                <label for="conteingency">Contingency:</label>
+                <input type="contingency">
+                <label for="Alternate">Alternate:</label>
+                <input type="alternate">
+                <label for="reserve">Final Reserve:</label>
+                <input type="reserve">
+                <label for="extra">extra:</label>
+                <input type="extra">
+            </form>
+            <p>Minimum Fuel Required: <span id="fuelTotal">0</span> USG</p>
+        </div>
+
+        <div class="massAndBalance">
+            <h2>Mass & Balance</h2>
+            <p>Upload a screenshot/picture of your mass & balance calculations</p>
+            <form id="mass-and-balance">
+                <label for="mAndB-pic-upload">Choose an image to upload:</label>
+                <input type="file" id="image-imput" accept="image/*">
+            </form>
+            <div class="mAndB-image-preview">
+                <p>No image uploaded yet</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

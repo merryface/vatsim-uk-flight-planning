@@ -1,0 +1,29 @@
+html {
+    font-family: sans-serif;
+    margin: 2rem;
+}
+
+label, input {
+    display: block
+}
+
+.checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.checklist input {
+    display:inline
+}
+
+.checklist label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 10rem;
+}
+
+main > div {
+    margin-bottom: 2rem;
+}
