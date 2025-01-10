@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Navigation Planner</title>
     <!-- External CSS -->
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/global.css">
+    <script defer src="./script.js"></script>
 </head>
 <body>
     <main>
@@ -30,7 +31,7 @@
                 <input type="checkbox" name="fuel" id="fuel">
             </label>
             <label for="mass">
-                Mass & Balance
+                Mass & Balance:
                 <input type="checkbox" name="mass" id="mass">
             </label>
             <label for="plog">
@@ -43,8 +44,8 @@
             <h2>Route Display</h2>
             <p>Upload a screenshot/picture of your planned route</p>
             <form id="route-pic-upload">
-                <label for="route-pic-upload">Choose an image to upload:</label>
-                <input type="file" id="image-imput" accept="image/*">
+                <label for="route-pic-input">Choose an image to upload:</label>
+                <input type="file" id="route-pic-input" accept="image/*">
             </form>
             <div class="route-image-preview">
                 <p>No image uploaded yet</p>
@@ -53,9 +54,9 @@
 
         <div class="effective-notams">
             <h2>NOTAMS</h2>
-            <form id="effective-notmas">
+            <form id="effective-notams">
                 <label for="notams-notes">Add notes about NOTAMS to effect:</label>
-                <textarea name="notams-notes"></textarea>
+                <textarea name="notams-notes" id="notams-notes"></textarea>
             </form>
         </div>
 
@@ -67,11 +68,11 @@
             </form>
             <form>
                 <label for="enroute">Enroute:</label>
-                <textarea name="enroute" id="departure"></textarea>
+                <textarea name="enroute" id="enroute"></textarea>
             </form>
             <form>
                 <label for="destination">Destination Airport:</label>
-                <textarea name="destination" id="departure"></textarea>
+                <textarea name="destination" id="destination"></textarea>
             </form>
         </div>
 
@@ -79,18 +80,20 @@
             <h2>Fuel Planning</h2>
             <p>Enter your fuel planning</p>
             <form>
+                <label for="fuelFlow">Expected Fuel Burn USG/H:</label>
+                <input type="number" name="fuelFlow" id="fuelFlow">
                 <label for="taxi">Taxi:</label>
-                <input type="text">
+                <input type="number" id="taxi">
                 <label for="trip">Trip:</label>
-                <input type="trip">
-                <label for="conteingency">Contingency:</label>
-                <input type="contingency">
-                <label for="Alternate">Alternate:</label>
-                <input type="alternate">
+                <input type="number" id="trip">
+                <label for="contingency">Contingency:</label>
+                <input type="number" id="contingency">
+                <label for="alternate">Alternate:</label>
+                <input type="number" id="alternate">
                 <label for="reserve">Final Reserve:</label>
-                <input type="reserve">
-                <label for="extra">extra:</label>
-                <input type="extra">
+                <input type="number" id="reserve">
+                <label for="extra">Extra:</label>
+                <input type="number" id="extra">
             </form>
             <p>Minimum Fuel Required: <span id="fuelTotal">0</span> USG</p>
         </div>
@@ -99,8 +102,8 @@
             <h2>Mass & Balance</h2>
             <p>Upload a screenshot/picture of your mass & balance calculations</p>
             <form id="mass-and-balance">
-                <label for="mAndB-pic-upload">Choose an image to upload:</label>
-                <input type="file" id="image-imput" accept="image/*">
+                <label for="mass-pic-input">Choose an image to upload:</label>
+                <input type="file" id="mass-pic-input" accept="image/*">
             </form>
             <div class="mAndB-image-preview">
                 <p>No image uploaded yet</p>
