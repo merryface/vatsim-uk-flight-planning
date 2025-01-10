@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/global.css">
     <link rel="stylesheet" href="./style/main.css">
+
     
     <!-- CDNs -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-
 
     <!-- Scripts -->
     <script defer src="./scripts/imageUpload.js"></script>
@@ -22,7 +22,10 @@
 </head>
 <body>
     <main>
-        <h1>Navigation Planner</h1>
+        <div class="header">
+            <h1>Navigation Planner</h1>
+        </div>
+        
         <div class="checklist">
             <h2>Checklist</h2>
             <ul>
@@ -66,7 +69,7 @@
             </div>
         </div>
 
-        <div class="effective-notams">
+        <div class="effective-notams page-break">
             <h2>NOTAMS</h2>
             <form id="effective-notams">
                 <label for="notams-notes">Notes about NOTAMS to effect:</label>
