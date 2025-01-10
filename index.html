@@ -11,6 +11,10 @@
     <!-- Scripts -->
     <script defer src="./scripts/imageUpload.js"></script>
     <script defer src="./scripts/fuelPlanning.js"></script>
+    <script defer src="./scripts/downloadPDF.js"></script>
+
+    <!-- CDNs -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
 </head>
 <body>
     <main>
@@ -44,9 +48,9 @@
         </div>
         
         <div class="route">
-            <h2>Route Display</h2>
-            <p>Upload a screenshot/picture of your planned route</p>
-            <form id="route-pic-upload">
+            <h2>Route:</h2>
+            <p class="hidden-in-pdf">Upload a screenshot/picture of your planned route</p>
+            <form id="route-pic-upload" class="hidden-in-pdf">
                 <label for="route-pic-input">Choose an image to upload:</label>
                 <input type="file" id="route-pic-input" accept="image/*">
             </form>
@@ -58,7 +62,7 @@
         <div class="effective-notams">
             <h2>NOTAMS</h2>
             <form id="effective-notams">
-                <label for="notams-notes">Add notes about NOTAMS to effect:</label>
+                <label for="notams-notes">Notes about NOTAMS to effect:</label>
                 <textarea name="notams-notes" id="notams-notes"></textarea>
             </form>
         </div>
@@ -81,7 +85,7 @@
 
         <div class="fuel">
             <h2>Fuel Planning</h2>
-            <p>Enter your fuel planning</p>
+            <p class="hidden-in-pdf">Enter your fuel planning</p>
             <form>
                 <label for="fuelFlow">Expected Fuel Burn USG/H:</label>
                 <input type="number" name="fuelFlow" id="fuelFlow">
@@ -103,8 +107,8 @@
 
         <div class="massAndBalance">
             <h2>Mass & Balance</h2>
-            <p>Upload a screenshot/picture of your mass & balance calculations</p>
-            <form id="mass-and-balance">
+            <p class="hidden-in-pdf">Upload a screenshot/picture of your mass & balance calculations</p>
+            <form id="mass-and-balance" class="hidden-in-pdf">
                 <label for="mass-pic-input">Choose an image to upload:</label>
                 <input type="file" id="mass-pic-input" accept="image/*">
             </form>
@@ -113,5 +117,6 @@
             </div>
         </div>
     </main>
+    <button id="downloadPdf">Download PDF</button>
 </body>
 </html>
