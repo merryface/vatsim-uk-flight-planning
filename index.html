@@ -100,7 +100,7 @@
             <h2>Fuel Planning</h2>
             <p class="hidden-in-pdf">Enter your fuel planning</p>
             <form>
-                <label for="fuelFlow">Expected Fuel Burn USG/H:</label>
+                <label for="fuelFlow">Expected Fuel Burn <input id="setVolumeUnit" class="volumeUnit" placeholder="USG"> /H:</label>
                 <input type="number" name="fuelFlow" id="fuelFlow">
                 <label for="taxi">Taxi:</label>
                 <input type="number" id="taxi">
@@ -115,7 +115,7 @@
                 <label for="extra">Extra:</label>
                 <input type="number" id="extra">
             </form>
-            <p>Minimum Fuel Required: <span id="fuelTotal">0</span> USG</p>
+            <p>Minimum Fuel Required: <span id="fuelTotal">0</span> <span id="volumeUnit">USG</span></p>
         </div>
 
         <div class="massAndBalance">
@@ -128,6 +128,7 @@
             <div class="mAndB-image-preview">
                 <p>No image uploaded</p>
             </div>
+            <textarea class="mAndBNotes">Add notes here...</textarea>
         </div>
 
         <div class="tem">

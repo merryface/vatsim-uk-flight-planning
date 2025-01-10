@@ -19,7 +19,7 @@
 
         // Update the total in the span with id 'fuelTotal'
         const fuelTotalSpan = d.querySelector('#fuelTotal');
-        fuelTotalSpan.textContent = totalFuel.toFixed(2); // Display with two decimal places
+        fuelTotalSpan.textContent = totalFuel.toFixed(1); // Display with two decimal places
     };
 
     // Function to calculate and update the final reserve based on fuel flow
@@ -37,6 +37,14 @@
         // Recalculate the total fuel
         updateFuelTotal();
     };
+
+    // Update Fuel volume measurement unit
+    const volumeUnit = d.getElementById("volumeUnit")
+    const setVolumeUnit = d.getElementById("setVolumeUnit")
+
+    setVolumeUnit.addEventListener("input", () => {
+        volumeUnit.innerHTML = setVolumeUnit.value
+    })
 
     // Add event listeners to update total on input changes
     const fuelInputs = d.querySelectorAll('#taxi, #trip, #contingency, #alternate, #reserve, #extra');
