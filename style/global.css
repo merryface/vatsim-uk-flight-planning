@@ -14,3 +14,6 @@ input {
     vertical-align: middle; /* Align text vertically within the input */
 }
 
+main > div {
+    margin-bottom: 2rem;
+}

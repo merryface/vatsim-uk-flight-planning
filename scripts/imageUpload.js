@@ -11,7 +11,7 @@
             img.src = reader.result;
             img.alt = "Uploaded image";
 
-            // c;ear previous content and append new image
+            // clear previous content and append new image
             previewElement.innerHTML = "";
             previewElement.appendChild(img)
           };

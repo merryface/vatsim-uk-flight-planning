@@ -25,7 +25,7 @@
             element.style.display = 'none';
         });
 
-        const pdf = new window.jspdf.jsPDF('p', 'pt', 'a4'); // Create jsPDF instance
+        const pdf = new window.jspdf.jsPDF(); // Create jsPDF instance
         const pdfWidth = pdf.internal.pageSize.width; // A4 page width in points
         const contentWidth = mainContent.offsetWidth;
 

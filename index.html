@@ -18,6 +18,8 @@
     <script defer src="./scripts/imageUpload.js"></script>
     <script defer src="./scripts/fuelPlanning.js"></script>
     <script defer src="./scripts/downloadPDF.js"></script>
+    <script defer src="./scripts/pageBreaker.js"></script>
+    <script defer src="./scripts/temAddRow.js"></script>
 
 </head>
 <body>
@@ -69,13 +71,15 @@
             </div>
         </div>
 
-        <div class="effective-notams page-break">
+        <div class="effective-notams">
             <h2>NOTAMS</h2>
             <form id="effective-notams">
                 <label for="notams-notes">Notes about NOTAMS to effect:</label>
                 <textarea name="notams-notes" id="notams-notes"></textarea>
             </form>
         </div>
+
+        <div class="page-break" id="pageBreak"></div>
 
         <div class="weather">
             <h2>Weather</h2>
@@ -125,6 +129,35 @@
             <div class="mAndB-image-preview">
                 <p>No image uploaded</p>
             </div>
+        </div>
+
+        <div class="tem">
+            <h2>Threat and Error Management (TEM)</h2>
+            <form id="tem-form">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Threat/Error</th>
+                            <th>Management</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" name="threat1" placeholder="Enter threat/error"></td>
+                            <td><input type="text" name="management1" placeholder="Enter management"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="threat2" placeholder="Enter threat/error"></td>
+                            <td><input type="text" name="management2" placeholder="Enter management"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="threat3" placeholder="Enter threat/error"></td>
+                            <td><input type="text" name="management3" placeholder="Enter management"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="button" id="addRow">Add Row</button>
+            </form>
         </div>
     </main>
     <button id="downloadPdf">Download PDF</button>
