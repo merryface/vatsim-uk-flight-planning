@@ -4,26 +4,13 @@ html {
 }
 
 label, input {
-    display: block
+    display: block;
+    margin-bottom: 1rem;
 }
 
-.checklist {
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
+input {
+    height: 2.5rem; /* Set a consistent height */
+    line-height: 2.5rem; /* Match line-height to height for vertical centering */
+    vertical-align: middle; /* Align text vertically within the input */
 }
 
-.checklist input {
-    display:inline
-}
-
-.checklist label {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 10rem;
-}
-
-main > div {
-    margin-bottom: 2rem;
-}

@@ -45,3 +45,9 @@
   #root, #__next {
     isolation: isolate;
   }
+
+  ul, ol {
+    list-style: none; /* Remove bullet points or numbering */
+    padding: 0;       /* Remove default padding */
+    margin: 0;        /* Remove default margin */
+}

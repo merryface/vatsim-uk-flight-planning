@@ -7,44 +7,51 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/global.css">
+    <link rel="stylesheet" href="./style/main.css">
     
+    <!-- CDNs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+
     <!-- Scripts -->
     <script defer src="./scripts/imageUpload.js"></script>
     <script defer src="./scripts/fuelPlanning.js"></script>
     <script defer src="./scripts/downloadPDF.js"></script>
 
-    <!-- CDNs -->
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
 </head>
 <body>
     <main>
         <h1>Navigation Planner</h1>
         <div class="checklist">
             <h2>Checklist</h2>
-            <label for="route">
-                Route:
-                <input type="checkbox" name="route" id="route">
-            </label>
-            <label for="notams">
-                NOTAMS:
-                <input type="checkbox" name="notams" id="notams">
-            </label>
-            <label for="wx">
-                Weather:
-                <input type="checkbox" name="wx" id="wx">
-            </label>
-            <label for="fuel">
-                Fuel:
-                <input type="checkbox" name="fuel" id="fuel">
-            </label>
-            <label for="mass">
-                Mass & Balance:
-                <input type="checkbox" name="mass" id="mass">
-            </label>
-            <label for="plog">
-                PLOG:
-                <input type="checkbox" name="plog" id="plog">
-            </label>
+            <ul>
+                <li>
+                    <label for="route">Route:</label>
+                    <input type="checkbox" name="route" id="route">
+                </li>
+                <li>
+                    <label for="notams">NOTAMS:</label>
+                    <input type="checkbox" name="notams" id="notams">
+                </li>
+                <li>
+                    <label for="wx">Weather:</label>
+                    <input type="checkbox" name="wx" id="wx">
+                </li>
+                <li>
+                    <label for="fuel">Fuel:</label>
+                    <input type="checkbox" name="fuel" id="fuel">
+                </li>
+                <li>
+                    <label for="mass">Mass & Balance:</label>
+                    <input type="checkbox" name="mass" id="mass">
+                </li>
+                <li>
+                    <label for="plog">PLOG:</label>
+                    <input type="checkbox" name="plog" id="plog">
+                </li>
+            </ul>
+            
         </div>
         
         <div class="route">
@@ -55,7 +62,7 @@
                 <input type="file" id="route-pic-input" accept="image/*">
             </form>
             <div class="route-image-preview">
-                <p>No image uploaded yet</p>
+                <p>No image uploaded</p>
             </div>
         </div>
 
@@ -113,7 +120,7 @@
                 <input type="file" id="mass-pic-input" accept="image/*">
             </form>
             <div class="mAndB-image-preview">
-                <p>No image uploaded yet</p>
+                <p>No image uploaded</p>
             </div>
         </div>
     </main>
