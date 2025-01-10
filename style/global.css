@@ -1,6 +1,5 @@
 html {
     font-family: sans-serif;
-    margin: 2rem;
 }
 
 label, input {
@@ -16,4 +15,14 @@ input {
 
 main > div {
     margin-bottom: 2rem;
+}
+
+@media print {
+    #downloadPdf, #addRow, .hidden-in-pdf {
+      display: none;
+    }
+
+    .page-break {
+        page-break-before: always;
+    }
 }

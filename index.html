@@ -13,17 +13,18 @@
     <!-- CDNs -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
     <!-- Scripts -->
     <script defer src="./scripts/imageUpload.js"></script>
     <script defer src="./scripts/fuelPlanning.js"></script>
     <script defer src="./scripts/downloadPDF.js"></script>
-    <script defer src="./scripts/pageBreaker.js"></script>
+    <!-- <script defer src="./scripts/pageBreaker.js"></script> -->
     <script defer src="./scripts/temAddRow.js"></script>
 
 </head>
 <body>
-    <main>
+    <main id="content">
         <div class="header">
             <h1>Navigation Planner</h1>
         </div>
@@ -78,8 +79,6 @@
                 <textarea name="notams-notes" id="notams-notes"></textarea>
             </form>
         </div>
-
-        <div class="page-break" id="pageBreak"></div>
 
         <div class="weather">
             <h2>Weather</h2>
@@ -160,6 +159,6 @@
             </form>
         </div>
     </main>
-    <button id="downloadPdf">Download PDF</button>
+    <button id="downloadPdf">Download PDF using system's print</button>
 </body>
 </html>
