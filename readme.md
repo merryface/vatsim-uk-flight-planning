@@ -50,6 +50,7 @@ Welcome to the **Navigation Planner** project! This web application is designed 
    - **Fuel Planning**: Fill in fuel data to calculate the required total fuel.
    - **Mass & Balance**: Upload calculations and add notes.
    - **TEM**: Add rows for threats and management strategies.
+   - **Attach Additional PDFs**: Add supporting documents to be included in the final pdf.
 3. Click the **Download PDF** button to export your planning details into a PDF using the browser's native print feature.
 
 ---
@@ -68,6 +69,7 @@ Welcome to the **Navigation Planner** project! This web application is designed 
 - `fuelPlanning.js`: Calculates total fuel based on user input and adjusts final reserve dynamically.
 - `imageUpload.js`: Manages image upload and previews for route and mass & balance sections.
 - `temAddRow.js`: Allows users to dynamically add rows for TEM.
+- `attachPDF.js`: Allows users to add additional pdfs to the end of the final document
 
 ---
 
