@@ -12,13 +12,13 @@
     <!-- CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
 
-
     <!-- Scripts -->
     <script defer src="./scripts/imageUpload.js"></script>
     <script defer src="./scripts/fuelPlanning.js"></script>
     <script defer src="./scripts/downloadPDF.js"></script>
     <script defer src="./scripts/temAddRow.js"></script>
     <script defer src="./scripts/attachPDF.js"></script>
+    <script defer src="./scripts/localStorageHandler.js"></script>
 
 </head>
 <body>
@@ -171,6 +171,7 @@
         </div>
         
     </main>
+    <div id="clear-data-button" class="floating-button hidden-in-pdf">Reset</div>
     <button id="downloadPdf">Download PDF using system's print</button>
 </body>
 </html>
