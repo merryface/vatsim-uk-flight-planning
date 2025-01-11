@@ -22,7 +22,10 @@ main > div {
       display: none;
     }
 
-    .page-break {
+    .page-break, .effective-notams {
+        page-break-inside:avoid;
         page-break-before: always;
+        break-before: page; /* Modern CSS */
+        break-inside: avoid; /* Modern CSS */
     }
 }

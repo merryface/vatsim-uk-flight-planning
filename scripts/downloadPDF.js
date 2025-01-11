@@ -12,15 +12,13 @@
 			const pageHeight = 297 * 3.7795275591; // A4 height in pixels
 			let currentHeight = 0;
 
-			console.log(divs)
-
 			divs.forEach((div) => {
-					const rect = div.getBoundingClientRect();
-					const divHeight = rect.height;
+					const divHeight = div.offsetHeight;
 
 					// Calculate height including current content
 					if (currentHeight + divHeight > pageHeight) {
 							div.classList.add('page-break');
+							div.offsetHeight;
 							currentHeight = divHeight; // Reset height for new page
 					} else {
 							div.classList.remove('page-break');
