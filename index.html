@@ -9,11 +9,16 @@
     <link rel="stylesheet" href="./style/global.css">
     <link rel="stylesheet" href="./style/main.css">
 
+    <!-- CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+
+
     <!-- Scripts -->
     <script defer src="./scripts/imageUpload.js"></script>
     <script defer src="./scripts/fuelPlanning.js"></script>
     <script defer src="./scripts/downloadPDF.js"></script>
     <script defer src="./scripts/temAddRow.js"></script>
+    <script defer src="./scripts/attachPDF.js"></script>
 
 </head>
 <body>
@@ -153,6 +158,18 @@
                 <button type="button" id="addRow">Add Row</button>
             </form>
         </div>
+
+        <div class="additional-pdfs">
+            <h2 class="hidden-in-pdf">Attach Additional PDFs</h2>
+            <form id="pdf-upload-form" class="hidden-in-pdf">
+                <label for="pdf-upload">Choose PDF(s) to attach:</label>
+                <input type="file" id="pdf-upload" accept="application/pdf" multiple>
+            </form>
+            <div id="pdf-preview">
+                <p>No PDFs uploaded</p>
+            </div>
+        </div>
+        
     </main>
     <button id="downloadPdf">Download PDF using system's print</button>
 </body>

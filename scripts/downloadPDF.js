@@ -12,6 +12,8 @@
 			const pageHeight = 297 * 3.7795275591; // A4 height in pixels
 			let currentHeight = 0;
 
+			console.log(divs)
+
 			divs.forEach((div) => {
 					const rect = div.getBoundingClientRect();
 					const divHeight = rect.height;
