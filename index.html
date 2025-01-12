@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/global.css">
     <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/modal.css">
 
     <!-- CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
@@ -19,7 +20,7 @@
     <script defer src="./scripts/temAddRow.js"></script>
     <script defer src="./scripts/attachPDF.js"></script>
     <script defer src="./scripts/localStorageHandler.js"></script>
-
+    <script defer src="./scripts/modal.js"></script>
 </head>
 <body>
     <main id="content">
@@ -127,7 +128,7 @@
             <div class="mAndB-image-preview">
                 <p>No image uploaded</p>
             </div>
-            <textarea class="mAndBNotes">Add notes here...</textarea>
+            <textarea class="mAndBNotes" placeholder="Add notes here..."></textarea>
         </div>
 
         <div class="tem">
@@ -172,6 +173,82 @@
         
     </main>
     <div id="clear-data-button" class="floating-button hidden-in-pdf">Reset</div>
+    <button id="toggle-info-button" class="open-instruction floating-button hidden-in-pdf">ⓘ</button>
     <button id="downloadPdf">Download PDF using system's print</button>
+
+
+    <!-- Pop Up -->
+     <div class="resources hidden-in-pdf hidden" id="modal">
+        <div class="container">
+            <div class="explainer">
+                <h3>Checklist</h3>
+                <p>Chek off items as you complete them. Purely for self-tracking.</p>
+            </div>
+            
+            <div class="explainer">
+                <h3>Route</h3>
+                <p>Add a screenshot of the planned route. use the notes to add details like time enroute, distance enroute, cruise level. These are to help you, your instructor, and your examiner see what's been planned and why. Below are different resources you can use for flight planning. VATSIM UK Pilot training department require that you use Little NavMap.</p>
+                <ul>
+                    <li><a href="https://albar965.github.io/littlenavmap.html">Little Navmap (Free)</a></li>
+                    <li><a href="https://skyvector.com/">SkyVector (Free)</a></li>
+                    <li><a href="https://www.skydemon.aero/">SkyDemon (Paid)</a></li>
+                    <li><a href="https://navigraph.com/">Navigraph (Paid)</a></li>
+                </ul>
+            </div>
+            
+            <div class="explainer">
+                <h3>NOTAMs</h3>
+                <p>Add notes about the relevant NOTAMS for your planned flight. Make it easy to read but include important details like active times, locations, etc. The NATS website has a great tool for you to get all relevant NOTAMS and even Charts, wich can be exported. Make sure to adjust Briefing options, otherewise you will get hundreds of NOTAMs, most of which will be irrelevant to you. Free sign up required. Another great free tool is notaminfo.com. Make sure to sign up, login, then go to hte flight planning map. turn off all the NOTAM checkboxes, then select your route and the appropriate configurations and save the route. From there, you can then select Route NOTAMS, scroll to the bottom, and click "Printer-friendly version," which you can then save and add to the form.</p>
+                <ul>
+                    <li><a href="https://nats-uk.ead-it.com/cms-nats/opencms/en/NOTAM/">NATS PIB (free - sign up required)</a></li>
+                    <li><a href="https://notaminfo.com/nationalmap">NOTAM Info (free - sign up recommended)</a></li>
+                </ul>
+            </div>
+            
+            <div class="explainer">
+                <h3>Weather</h3>
+                <p>Add relevant METAR and TAF data for each section. Add notes in the enroute box in relation to cruising winds, and significant weather found in the F215 charts. Add the pdf from your planning at the end of the form. Make sure to sign up to the Met Office's Aviaiton Briefing Service.</p>
+                <ul>
+                    <li><a href="https://www.metoffice.gov.uk/premium/generalaviation/#">Met Office Aviation Briefing Service</a></li>
+                </ul>
+            </div>
+            
+            <div class="explainer">
+                <h3>Fuel</h3>
+                <p>Fill in the different fuel requirements.</p>
+                <ul>
+                    <li><strong>Taxi fuel:</strong> Fuel to start and taxi to reach the departure runway.</li>
+                    <li><strong>Trip Fuel:</strong> The fuel required for take-off to landing at destination.</li>
+                    <li><strong>Contingency fuel:</strong> 5% trip or 5 minutes, whichever is highest.</li>
+                    <li><strong>Alternate fuel:</strong> Fuel to get to the alternate from a go-around at destination</li>
+                    <li><strong>Final Reserve:</strong> For VFR it is 30 min daytime, 45 minutes at night. Must land with at least this amount</li>
+                    <li><strong>Extra:</strong> Any extra fuel added by PIC discretion</li>
+                </ul>
+            </div>
+            
+            <div class="explainer">
+                <h3>Mass & Balance</h3>
+                <p>Add a screeenshot of your Mass and Balance planning. Whether you use manually do it, or use the online E6B web app, make sure to take a screenshot or create a pdf of your M&B.</p>
+                <ul>
+                    <li><a href="https://e6bx.com/weight-balance/">E6BX Mass and Balance</a></li>
+                </ul>
+            </div>
+            
+            <div class="explainer">
+                <h3>Threat And Error Management</h3>
+                <p>Record threats and errors you've identified and how to mitigate them. Below is a good resource to help you understand good TEM fundamentals.</p>
+                <ul>
+                    <li><a href="https://skybrary.aero/articles/threat-and-error-management-tem-flight-operations">Skybrary TEM Article</a></li>
+                </ul>
+            </div>
+            
+            <div class="explainer">
+                <h3>Additional PDFs</h3>
+                <p>Add all supporting documents to complete your flight planning package</p>
+            </div>
+
+            <button id="close-modal">X</button>
+        </div>
+     </div>
 </body>
 </html>
